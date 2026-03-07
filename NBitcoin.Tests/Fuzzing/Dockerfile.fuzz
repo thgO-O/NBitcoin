@@ -1,0 +1,27 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0-bookworm-slim
+
+ARG AFLPP_VERSION=v4.35c
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        clang \
+        llvm \
+        lld \
+        git \
+        ca-certificates \
+        bash \
+        file \
+        wget \
+        python3 \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN git clone --depth 1 --branch "${AFLPP_VERSION}" https://github.com/AFLplusplus/AFLplusplus /tmp/AFLplusplus \
+    && make -C /tmp/AFLplusplus distrib \
+    && make -C /tmp/AFLplusplus install \
+    && rm -rf /tmp/AFLplusplus
+
+RUN dotnet tool install --tool-path /opt/tools SharpFuzz.CommandLine --version 2.2.0
+
+ENV PATH=/opt/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+WORKDIR /work/NBitcoin.Tests/Fuzzing
