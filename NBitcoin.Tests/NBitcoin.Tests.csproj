@@ -203,4 +203,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Fuzzing\**\*.cs" />
+  </ItemGroup>
 </Project>
