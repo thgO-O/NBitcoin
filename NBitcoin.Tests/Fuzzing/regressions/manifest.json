@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "updated_at_utc": "2026-03-02T19:33:43Z",
+  "entries": [
+    {
+      "id": "psbt-hexencoder-ffff",
+      "target": "psbt-transaction",
+      "kind": "crash",
+      "status": "open",
+      "expectation": "crash",
+      "input_path": "regressions/psbt-transaction/open/psbt-transaction-id000004.min",
+      "source_artifact": "reports/archive/hackathon-2026-02-27.md",
+      "signature": "System.IndexOutOfRangeException | NBitcoin.DataEncoders.HexEncoder.IsValid | NBitcoin.PSBT.Parse",
+      "signature_hash": "14e869718c57dc15aff65a8ca45ece67fcb47999a30ee4c9f113773a38ab1720",
+      "discovered_at_utc": "2026-02-27T00:00:00Z",
+      "repro_3_of_3": true,
+      "notes": "Minimized historical crash from hackathon."
+    },
+    {
+      "id": "psbt-transaction-e1249f8def8f",
+      "target": "psbt-transaction",
+      "kind": "crash",
+      "status": "open",
+      "expectation": "crash",
+      "input_path": "regressions/psbt-transaction/open/psbt-transaction-20260302-e1249f8def8f.bin",
+      "source_artifact": "artifacts/psbt-transaction/20260302T143419Z-container/findings/default/crashes/id:000000,sig:02,src:000000,time:200,execs:387,op:inf,pos:0",
+      "signature": "Unhandled exception. System.IndexOutOfRangeException: Index was outside the bounds of the array.|NBitcoin.DataEncoders.HexEncoder.IsValid(String str)|NBitcoin.DataEncoders.HexEncoder.IsWellFormed(String str)|NBitcoin.PSBT.Parse(String hexOrBase64, Network network)",
+      "signature_hash": "e1249f8def8ff3a79373c2ff5730b897177c2c70ba8c58db0fa87511691f772d",
+      "discovered_at_utc": "2026-03-02T14:37:36Z",
+      "repro_3_of_3": true,
+      "notes": "Auto-triaged from local campaign artifacts."
+    },
+    {
+      "id": "psbt-transaction-8f8f9d15dd5c",
+      "target": "psbt-transaction",
+      "kind": "crash",
+      "status": "open",
+      "expectation": "crash",
+      "input_path": "regressions/psbt-transaction/open/psbt-transaction-20260302-8f8f9d15dd5c.bin",
+      "source_artifact": "artifacts/psbt-transaction/20260302T143419Z-container/findings/default/crashes/id:000004,sig:02,src:000000,time:4609,execs:12403,op:havoc,rep:1",
+      "signature": "Unhandled exception. System.IndexOutOfRangeException: Index was outside the bounds of the array.|NBitcoin.DataEncoders.HexEncoder.DecodeData(String encoded)|NBitcoin.Transaction.Parse(String hex, Network network)|NBitcoin.Tests.Fuzzing.PsbtTransaction.Program.<>c__DisplayClass1_1.<RunTarget>b__3()",
+      "signature_hash": "8f8f9d15dd5c33c30c362556a24116f0a8969674eb1b3de0ee1690ff9b7c3566",
+      "discovered_at_utc": "2026-03-02T14:37:37Z",
+      "repro_3_of_3": true,
+      "notes": "Auto-triaged from local campaign artifacts."
+    },
+    {
+      "id": "psbt-transaction-3db1475dec70",
+      "target": "psbt-transaction",
+      "kind": "crash",
+      "status": "open",
+      "expectation": "crash",
+      "input_path": "regressions/psbt-transaction/open/psbt-transaction-20260302-3db1475dec70.bin",
+      "source_artifact": "artifacts/psbt-transaction/20260302T143419Z-container/findings/default/crashes/id:000030,sig:02,src:000193,time:5399851,execs:7510538,op:havoc,rep:8",
+      "signature": "Unhandled exception. System.IndexOutOfRangeException: Index was outside the bounds of the array.|NBitcoin.Map.ThrowIfInvalidKeysLeft()|NBitcoin.Maps.ThrowIfInvalidKeysLeft()|NBitcoin.BIP370.PSBT0..ctor(Maps maps, Network network)",
+      "signature_hash": "3db1475dec701092ea7ce0c66b67c25479e356db8d208a732db3bdad5bac4ed4",
+      "discovered_at_utc": "2026-03-02T19:33:43Z",
+      "repro_3_of_3": true,
+      "notes": "Auto-triaged from local campaign artifacts."
+    }
+  ]
+}
