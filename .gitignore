@@ -193,3 +193,19 @@ project.lock.json
 /dotnet-tpl35
 /NBitcoin.Bench/BenchmarkDotNet.Artifacts
 .idea
+
+# NBitcoin local fuzzing artifacts
+/NBitcoin.Tests/Fuzzing/artifacts/
+/NBitcoin.Tests/Fuzzing/findings/
+/NBitcoin.Tests/Fuzzing/findings-*/
+/NBitcoin.Tests/Fuzzing/.tmp-*/
+/NBitcoin.Tests/Fuzzing/**/bin/
+/NBitcoin.Tests/Fuzzing/**/obj/
+/NBitcoin.Tests/Fuzzing/reports/fuzz-report-*.md
+/NBitcoin.Tests/Fuzzing/scripts/*.log
+/NBitcoin.Tests/Fuzzing/corpus/demo-fast/
+/NBitcoin.Tests/Fuzzing/corpus/psbt-transaction-binonly/
+
+# Local demo scripts
+/NBitcoin/demo.sh
+/NBitcoin/demo-live.sh

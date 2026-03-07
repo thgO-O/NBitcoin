@@ -1,0 +1,11 @@
+[Unit]
+Description=Run NBitcoin local fuzzing rotation every 6 hours
+
+[Timer]
+OnBootSec=2m
+OnUnitActiveSec=6h
+Persistent=true
+Unit=nbitcoin-fuzzing-rotation.service
+
+[Install]
+WantedBy=timers.target
